@@ -13,7 +13,7 @@ msg = master.recv_match(type='COMMAND_ACK', blocking=True)
 print(msg)
 
 master.mav.command_long_send(master.target_system, master.target_component,
-                                     mavutil.mavlink.MAV_CMD_NAV_TAKEOFF, 0, 0, 0, 0, 0, 0, 0, -20)
+                                     mavutil.mavlink.MAV_CMD_NAV_TAKEOFF, 0, 0, 0, 0, 0, 0, 0, -2)
 
 msg = master.recv_match(type='COMMAND_ACK', blocking=True)
 print(msg)
